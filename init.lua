@@ -1,5 +1,6 @@
 dofile(minetest.get_modpath("castle").."/pillars.lua")
 dofile(minetest.get_modpath("castle").."/arrowslit.lua")
+dofile(minetest.get_modpath("castle").."/tapestry.lua")
 
 minetest.register_node("castle:stonewall", {
 	description = "Castle Wall",
@@ -35,10 +36,10 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "castle:rubble",
+	output = "castle:rubble 2",
 	recipe = {
 		{"default:gravel"},
-		{"default:stone"},
+		{"default:desert_stone"},
 	}
 })
 
@@ -49,10 +50,10 @@ minetest.register_node("castle:stonewall_corner", {
 	description = "Castle Corner",
 	tiles = {"castle_stonewall.png", 
 	                  "castle_stonewall.png",
-			"castle_corner_stonewall2.png", 
-			"castle_stonewall.png", 
 			"castle_corner_stonewall1.png", 
-			"castle_stonewall.png"},
+			"castle_stonewall.png", 
+			"castle_stonewall.png", 
+			"castle_corner_stonewall2.png"},
 	groups = {cracky=3},
 })
 
