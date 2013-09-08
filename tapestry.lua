@@ -56,7 +56,7 @@ for _, row in ipairs(tapestry.colours) do
 	         drawtype = "nodebox",
 		description = desc.." Tapestry",
 		tiles = {"wool_"..name..".png"},
-		groups = {oddly_breakable_by_hand=3,flammable=3},
+		groups = {oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 		sounds = default.node_sound_defaults(),
 	         paramtype = "light",
 	         paramtype2 = "facedir",
@@ -100,7 +100,7 @@ for _, row in ipairs(tapestry.colours) do
 	         drawtype = "nodebox",
 		description = desc.." Tapestry (Long)",
 		tiles = {"wool_"..name..".png"},
-		groups = {oddly_breakable_by_hand=3,flammable=3},
+		groups = {oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 		sounds = default.node_sound_defaults(),
 	         paramtype = "light",
 	         paramtype2 = "facedir",
@@ -144,7 +144,7 @@ for _, row in ipairs(tapestry.colours) do
 	         drawtype = "nodebox",
 		description = desc.." Tapestry (Very Long)",
 		tiles = {"wool_"..name..".png"},
-		groups = {oddly_breakable_by_hand=3,flammable=3},
+		groups = {oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 		sounds = default.node_sound_defaults(),
 	         paramtype = "light",
 	         paramtype2 = "facedir",
@@ -173,7 +173,7 @@ for _, row in ipairs(tapestry.colours) do
 		-- Crafting from long tapestry and wool
 		minetest.register_craft({
 			type = "shapeless",
-			output = 'castle:long_tapestry_'..name,
+			output = 'castle:very_long_tapestry_'..name,
 			recipe = {'wool:'..craft_color_group, 'castle:long_tapestry_'..name},
 		})
 	end
