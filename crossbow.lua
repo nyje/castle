@@ -1,5 +1,5 @@
 arrows = {
-	{"castle:arrow", "castle:arrow_entity"},,
+	{"castle:arrow", "castle:arrow_entity"},
 }
 
 local castle_shoot_arrow = function(itemstack, player)
