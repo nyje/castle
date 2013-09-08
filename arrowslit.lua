@@ -4,6 +4,7 @@ minetest.register_node("castle:arrowslit",{
 	tiles = {"castle_stonewall.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	walkable = false,
 	groups = {cracky=3},
 	node_box = {
 		type = "fixed",
@@ -44,6 +45,7 @@ minetest.register_node("castle:arrowslit_hole",{
 	tiles = {"castle_stonewall.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	walkable = false,
 	groups = {cracky=3},
 	node_box = {
 		type = "fixed",
@@ -77,6 +79,7 @@ minetest.register_node("castle:arrowslit_cross",{
 	tiles = {"castle_stonewall.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	walkable = false,
 	groups = {cracky=3},
 	node_box = {
 		type = "fixed",

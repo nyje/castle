@@ -2,3 +2,4 @@ default
 stairs
 doors
 wool
+farming
