@@ -1,12 +1,15 @@
 dofile(minetest.get_modpath("castle").."/pillars.lua")
 dofile(minetest.get_modpath("castle").."/arrowslit.lua")
+dofile(minetest.get_modpath("castle").."/arrowslit_cobble.lua")
+dofile(minetest.get_modpath("castle").."/arrowslit_stonebrick.lua")
 dofile(minetest.get_modpath("castle").."/tapestry.lua")
 dofile(minetest.get_modpath("castle").."/crossbow.lua")
 dofile(minetest.get_modpath("castle").."/arrow.lua")
+dofile(minetest.get_modpath("castle").."/jailbars.lua")
 
 minetest.register_node("castle:stonewall", {
 	description = "Castle Wall",
-	drawtype = normal,
+	drawtype = "normal",
 	tiles = {"castle_stonewall.png"},
 	paramtype = light,
 	drop = "castle:rubble",
@@ -16,7 +19,7 @@ minetest.register_node("castle:stonewall", {
 
 minetest.register_node("castle:rubble", {
 	description = "Castle Rubble",
-	drawtype = normal,
+	drawtype = "normal",
 	tiles = {"castle_rubble.png"},
 	paramtype = light,
 	groups = {crumbly=3},
@@ -46,7 +49,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("castle:stonewall_corner", {
-	drawtype = normal,
+	drawtype = "normal",
 	paramtype = light,
 	paramtype2 = "facedir",
 	description = "Castle Corner",
@@ -150,42 +153,6 @@ minetest.register_craft({
 	output = "stairs:slab_stonewall 6",
 	recipe = {
 		{"castle:stonewall","castle:stonewall","castle:stonewall"},
-	}
-})
-
-minetest.register_node("castle:jailbars",{
-	drawtype = "nodebox",
-	description = "Jailbars",
-	tiles = {"castle_steel.png"},
-	paramtype = "light",
-	paramtype2 = "facedir",
-	groups = {cracky=2},
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{0.125000,-0.500000,-0.125000,0.375000,0.500000,0.125000},
-			{-0.375000,-0.500000,-0.125000,-0.125000,0.500000,0.125000},
-			{-0.500000,0.375000,-0.125000,0.500000,0.500000,0.125000}, 
-			{-0.500000,-0.500000,-0.125000,0.500000,-0.375000,0.125000}, 
-		},
-	},
-	selection_box = {
-		type = "fixed",
-		fixed = {
-			{0.125000,-0.500000,-0.125000,0.375000,0.500000,0.125000},
-			{-0.375000,-0.500000,-0.125000,-0.125000,0.500000,0.125000},
-			{-0.500000,0.375000,-0.125000,0.500000,0.500000,0.125000}, 
-			{-0.500000,-0.500000,-0.125000,0.500000,-0.375000,0.125000}, 
-		},
-	},
-})
-
-minetest.register_craft({
-	output = "castle:jailbars 3",
-	recipe = {
-		{"default:steel_ingot","","default:steel_ingot"},
-		{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
-		{"default:steel_ingot","","default:steel_ingot"},
 	}
 })
 

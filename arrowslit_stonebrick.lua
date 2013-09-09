@@ -1,7 +1,7 @@
-minetest.register_node("castle:arrowslit",{
+minetest.register_node("castle:arrowslit_stonebrick",{
 	drawtype= "nodebox",
-	description = "Arrow Slit",
-	tiles = {"castle_stonewall.png"},
+	description = "Stonebrick Arrow Slit",
+	tiles = {"default_stone_brick.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
@@ -24,7 +24,7 @@ minetest.register_node("castle:arrowslit",{
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit 6",
+	output = "castle:arrowslit_stonebrick 6",
 	recipe = {
 		{'castle:stonewall','','castle:stonewall'},
 		{'castle:stonewall','','castle:stonewall'},
@@ -33,16 +33,16 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit",
+	output = "castle:arrowslit_stonebrick",
 	recipe = {
-		{'castle:arrowslit_cross'},
+		{'castle:arrowslit_stonebrick_cross'},
 	}
 })
 
-minetest.register_node("castle:arrowslit_hole",{
+minetest.register_node("castle:arrowslit_stonebrick_hole",{
 	drawtype= "nodebox",
-	description = "Arrow Slit with Hole",
-	tiles = {"castle_stonewall.png"},
+	description = "Stonebrick Arrow Slit with Hole",
+	tiles = {"default_stone_brick.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
@@ -67,16 +67,16 @@ minetest.register_node("castle:arrowslit_hole",{
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit_hole",
+	output = "castle:arrowslit_stonebrick_hole",
 	recipe = {
-		{'castle:arrowslit'},
+		{'castle:arrowslit_stonebrick'},
 	}
 })
 
-minetest.register_node("castle:arrowslit_cross",{
+minetest.register_node("castle:arrowslit_stonebrick_cross",{
 	drawtype= "nodebox",
-	description = "Arrow Slit with Cross",
-	tiles = {"castle_stonewall.png"},
+	description = "Stonebrick Arrow Slit with Cross",
+	tiles = {"default_stone_brick.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
@@ -103,8 +103,8 @@ minetest.register_node("castle:arrowslit_cross",{
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit_cross",
+	output = "castle:arrowslit_stonebrick_cross",
 	recipe = {
-		{'castle:arrowslit_hole'},
+		{'castle:arrowslit_stonebrick_hole'},
 	}
 })

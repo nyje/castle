@@ -1,7 +1,7 @@
-minetest.register_node("castle:arrowslit",{
+minetest.register_node("castle:arrowslit_cobble",{
 	drawtype= "nodebox",
-	description = "Arrow Slit",
-	tiles = {"castle_stonewall.png"},
+	description = "Cobble Arrow Slit",
+	tiles = {"default_cobble.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
@@ -24,7 +24,7 @@ minetest.register_node("castle:arrowslit",{
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit 6",
+	output = "castle:arrowslit_cobble 6",
 	recipe = {
 		{'castle:stonewall','','castle:stonewall'},
 		{'castle:stonewall','','castle:stonewall'},
@@ -33,16 +33,16 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit",
+	output = "castle:arrowslit_cobble",
 	recipe = {
-		{'castle:arrowslit_cross'},
+		{'castle:arrowslit_cobble_cross'},
 	}
 })
 
-minetest.register_node("castle:arrowslit_hole",{
+minetest.register_node("castle:arrowslit_cobble_hole",{
 	drawtype= "nodebox",
-	description = "Arrow Slit with Hole",
-	tiles = {"castle_stonewall.png"},
+	description = "Cobble Arrow Slit with Hole",
+	tiles = {"default_cobble.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
@@ -67,16 +67,16 @@ minetest.register_node("castle:arrowslit_hole",{
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit_hole",
+	output = "castle:arrowslit_cobble_hole",
 	recipe = {
-		{'castle:arrowslit'},
+		{'castle:arrowslit_cobble'},
 	}
 })
 
-minetest.register_node("castle:arrowslit_cross",{
+minetest.register_node("castle:arrowslit_cobble_cross",{
 	drawtype= "nodebox",
-	description = "Arrow Slit with Cross",
-	tiles = {"castle_stonewall.png"},
+	description = "Cobble Arrow Slit with Cross",
+	tiles = {"default_cobble.png"},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	walkable = true,
@@ -103,8 +103,8 @@ minetest.register_node("castle:arrowslit_cross",{
 })
 
 minetest.register_craft({
-	output = "castle:arrowslit_cross",
+	output = "castle:arrowslit_cobble_cross",
 	recipe = {
-		{'castle:arrowslit_hole'},
+		{'castle:arrowslit_cobble_hole'},
 	}
 })
