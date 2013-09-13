@@ -26,9 +26,9 @@ minetest.register_node("castle:arrowslit_cobble",{
 minetest.register_craft({
 	output = "castle:arrowslit_cobble 6",
 	recipe = {
-		{'castle:stonewall','','castle:stonewall'},
-		{'castle:stonewall','','castle:stonewall'},
-		{'castle:stonewall','','castle:stonewall'},
+		{'default:cobble','','default:cobble'},
+		{'default:cobble','','default:cobble'},
+		{'default:cobble','','default:cobble'},
 	}
 })
 
