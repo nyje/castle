@@ -75,9 +75,9 @@ for _, row in ipairs(pillar.types) do
 		minetest.register_craft({
 			output = "castle:pillars_"..name.."_bottom 4",
 			recipe = {
-			{craft_material,"", craft_material},
-			{craft_material,"", craft_material},
-			{craft_material,"", craft_material} },
+			{"",craft_material,""},
+			{"",craft_material,""},
+			{craft_material,craft_material,craft_material} },
 		})
 	end
 	if craft_material then
@@ -85,9 +85,9 @@ for _, row in ipairs(pillar.types) do
 		minetest.register_craft({
 			output = "castle:pillars_"..name.."_top 4",
 			recipe = {
-			{craft_material,"", craft_material},
-			{craft_material,"", craft_material},
-			{craft_material,"", craft_material} },
+			{craft_material,craft_material,craft_material},
+			{"",craft_material,""},
+			{"",craft_material,""} },
 		})
 	end
 	if craft_material then
@@ -95,9 +95,9 @@ for _, row in ipairs(pillar.types) do
 		minetest.register_craft({
 			output = "castle:pillars_"..name.."_middle 4",
 			recipe = {
-			{craft_material,"", craft_material},
-			{craft_material,"", craft_material},
-			{craft_material,"", craft_material} },
+			{craft_material,craft_material},
+			{craft_material,craft_material},
+			{craft_material,craft_material} },
 		})
 	end
 end
