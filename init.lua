@@ -1,7 +1,5 @@
 dofile(minetest.get_modpath("castle").."/pillars.lua")
 dofile(minetest.get_modpath("castle").."/arrowslit.lua")
-dofile(minetest.get_modpath("castle").."/arrowslit_cobble.lua")
-dofile(minetest.get_modpath("castle").."/arrowslit_stonebrick.lua")
 dofile(minetest.get_modpath("castle").."/tapestry.lua")
 dofile(minetest.get_modpath("castle").."/crossbow.lua")
 dofile(minetest.get_modpath("castle").."/arrow.lua")
