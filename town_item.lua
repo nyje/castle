@@ -218,6 +218,7 @@ minetest.register_craft({
 
 minetest.register_node("castle:light",{
 	drawtype = "glasslike",
+	description = "Light Block",
 	sunlight_propagates = true,
 	light_source = 14,
 	tiles = {"castle_street_light.png"},
