@@ -73,6 +73,7 @@ minetest.register_craft({
 minetest.register_node("castle:roofslate", {
 	drawtype = "raillike",
 	description = "Roof Slates",
+	inventory_image = "castle_slate.png",
 	paramtype = "light",
 	walkable = false,
 	tiles = {'castle_slate.png'},
@@ -87,6 +88,7 @@ minetest.register_node("castle:roofslate", {
 minetest.register_node("castle:hides", {
 	drawtype = "signlike",
 	description = "Hides",
+	inventory_image = "castle_hide.png",
 	paramtype = "light",
 	walkable = false,
 	tiles = {'castle_hide.png'},

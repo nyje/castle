@@ -257,3 +257,12 @@ minetest.register_node("castle:ropes",{
 		},
 	},
 })
+
+minetest.register_craft({
+	output = "castle:rope",
+	recipe = {
+		{"farming:string"},
+		{"farming:string"},
+		{"farming:string"},
+	}
+})
