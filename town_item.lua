@@ -50,14 +50,6 @@ minetest.register_node("castle:workbench",{
 		meta:set_string("infotext", "Workbench")
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*3)
-       		local IStack = ItemStack( 'default:pick_steel 1' )
-		inv:add_item( 'main', IStack )
-       		local IStack = ItemStack( 'default:shovel_steel 1' )
-		inv:add_item( 'main', IStack )
-       		local IStack = ItemStack( 'default:axe_steel 1' )
-		inv:add_item( 'main', IStack )
-       		local IStack = ItemStack( 'default:sword_steel 1' )
-		inv:add_item( 'main', IStack )
 	end,
 	can_dig = function(pos,player)
 		local meta = minetest.get_meta(pos);
@@ -106,14 +98,14 @@ minetest.register_node("castle:dungeon_stone", {
 minetest.register_craft({
 	output = "castle:dungeon_stone",
 	recipe = {
-		{"castle:pavement", "default:obsidian"},
+		{"default:stonebrick", "default:obsidian"},
 	}
 })
 
 minetest.register_craft({
 	output = "castle:dungeon_stone",
 	recipe = {
-		{"castle:pavement"},
+		{"default:stonebrick"},
 		{"default:obsidian"},
 
 	}
@@ -216,7 +208,7 @@ minetest.register_node("castle:pavement", {
 })
 
 minetest.register_craft({
-	output = "castle:pavement",
+	output = "castle:pavement 4",
 	recipe = {
 		{"default:stone", "default:cobble"},
 		{"default:cobble", "default:stone"},
