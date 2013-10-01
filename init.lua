@@ -4,6 +4,8 @@ dofile(minetest.get_modpath("castle").."/tapestry.lua")
 dofile(minetest.get_modpath("castle").."/crossbow.lua")
 dofile(minetest.get_modpath("castle").."/arrow.lua")
 dofile(minetest.get_modpath("castle").."/jailbars.lua")
+dofile(minetest.get_modpath("castle").."/town_item.lua")
+dofile(minetest.get_modpath("castle").."/shields_decor.lua")
 
 minetest.register_node("castle:stonewall", {
 	description = "Castle Wall",
