@@ -25,6 +25,15 @@ minetest.register_node("castle:anvil",{
 	},
 })
 
+minetest.register_craft({
+	output = "castle:anvil",
+	recipe = {
+		{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
+		{"","default:steel_ingot", ""},
+		{"default:steel_ingot", "default:steel_ingot","default:steel_ingot"},
+	}
+})
+
 minetest.register_node("castle:workbench",{
 	description = "Workbench",
 	tiles = {"castle_workbench_top.png", "default_wood.png", "castle_workbench_1.png", "castle_workbench_1.png", "castle_workbench_2.png", "castle_workbench_2.png"},
@@ -83,15 +92,6 @@ minetest.register_craft({
 		{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
 		{"default:wood", "default:wood","default:steel_ingot"},
 		{"default:tree", "default:tree","default:steel_ingot"},
-	}
-})
-
-minetest.register_craft({
-	output = "castle:workbench",
-	recipe = {
-		{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
-		{"","default:steel_ingot", ""},
-		{"default:steel_ingot", "default:steel_ingot","default:steel_ingot"},
 	}
 })
 
@@ -180,8 +180,8 @@ minetest.register_node("castle:straw", {
 minetest.register_craft({
 	output = "castle:straw",
 	recipe = {
-		{"default:grass", "default:grass"},
-		{"default:grass", "default:grass"},
+		{"default:grass_1", "default:grass_1"},
+		{"default:grass_1", "default:grass_1"},
 	}
 })
 
