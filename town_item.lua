@@ -216,7 +216,7 @@ minetest.register_node("castle:pavement", {
 })
 
 minetest.register_craft({
-	output = "castle:pavment",
+	output = "castle:pavement",
 	recipe = {
 		{"default:stone", "default:cobble"},
 		{"default:cobble", "default:stone"},
@@ -231,7 +231,15 @@ minetest.register_node("castle:light",{
 	tiles = {"castle_street_light.png"},
 	groups = {cracky=2},
 	paramtype = "light",
-	drop = "castle:light_off",
+})
+
+minetest.register_craft({
+	output = "castle:light",
+	recipe = {
+		{"default:stick", "default:glass", "default:stick"},
+		{"default:glass", "default:torch", "default:glass"},
+		{"default:stick", "default:glass", "default:stick"},
+	}
 })
 
 minetest.register_node("castle:ropes",{
