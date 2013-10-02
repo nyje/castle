@@ -25,6 +25,15 @@ minetest.register_node("castle:anvil",{
 	},
 })
 
+minetest.register_craft({
+	output = "castle:anvil",
+	recipe = {
+		{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
+		{"","default:steel_ingot", ""},
+		{"default:steel_ingot", "default:steel_ingot","default:steel_ingot"},
+	}
+})
+
 minetest.register_node("castle:workbench",{
 	description = "Workbench",
 	tiles = {"castle_workbench_top.png", "default_wood.png", "castle_workbench_1.png", "castle_workbench_1.png", "castle_workbench_2.png", "castle_workbench_2.png"},
@@ -41,14 +50,6 @@ minetest.register_node("castle:workbench",{
 		meta:set_string("infotext", "Workbench")
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*3)
-       		local IStack = ItemStack( 'default:pick_steel 1' )
-		inv:add_item( 'main', IStack )
-       		local IStack = ItemStack( 'default:shovel_steel 1' )
-		inv:add_item( 'main', IStack )
-       		local IStack = ItemStack( 'default:axe_steel 1' )
-		inv:add_item( 'main', IStack )
-       		local IStack = ItemStack( 'default:sword_steel 1' )
-		inv:add_item( 'main', IStack )
 	end,
 	can_dig = function(pos,player)
 		local meta = minetest.get_meta(pos);
@@ -86,15 +87,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = "castle:workbench",
-	recipe = {
-		{"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
-		{"","default:steel_ingot", ""},
-		{"default:steel_ingot", "default:steel_ingot","default:steel_ingot"},
-	}
-})
-
 minetest.register_node("castle:dungeon_stone", {
 	description = "Dungeon Stone",
 	drawtype = "normal",
@@ -106,14 +98,14 @@ minetest.register_node("castle:dungeon_stone", {
 minetest.register_craft({
 	output = "castle:dungeon_stone",
 	recipe = {
-		{"castle:pavement", "default:obsidian"},
+		{"default:stonebrick", "default:obsidian"},
 	}
 })
 
 minetest.register_craft({
 	output = "castle:dungeon_stone",
 	recipe = {
-		{"castle:pavement"},
+		{"default:stonebrick"},
 		{"default:obsidian"},
 
 	}
@@ -180,8 +172,8 @@ minetest.register_node("castle:straw", {
 minetest.register_craft({
 	output = "castle:straw",
 	recipe = {
-		{"default:grass", "default:grass"},
-		{"default:grass", "default:grass"},
+		{"default:grass_1", "default:grass_1"},
+		{"default:grass_1", "default:grass_1"},
 	}
 })
 
@@ -216,7 +208,7 @@ minetest.register_node("castle:pavement", {
 })
 
 minetest.register_craft({
-	output = "castle:pavment",
+	output = "castle:pavement 4",
 	recipe = {
 		{"default:stone", "default:cobble"},
 		{"default:cobble", "default:stone"},
@@ -226,12 +218,21 @@ minetest.register_craft({
 
 minetest.register_node("castle:light",{
 	drawtype = "glasslike",
+	description = "Light Block",
 	sunlight_propagates = true,
 	light_source = 14,
 	tiles = {"castle_street_light.png"},
 	groups = {cracky=2},
 	paramtype = "light",
-	drop = "castle:light_off",
+})
+
+minetest.register_craft({
+	output = "castle:light",
+	recipe = {
+		{"default:stick", "default:glass", "default:stick"},
+		{"default:glass", "default:torch", "default:glass"},
+		{"default:stick", "default:glass", "default:stick"},
+	}
 })
 
 minetest.register_node("castle:ropes",{
@@ -255,4 +256,13 @@ minetest.register_node("castle:ropes",{
 			{-0.062500,-0.500000,-0.062500,0.000000,0.500000,0.000000}, 
 		},
 	},
+})
+
+minetest.register_craft({
+	output = "castle:ropes",
+	recipe = {
+		{"farming:string"},
+		{"farming:string"},
+		{"farming:string"},
+	}
 })

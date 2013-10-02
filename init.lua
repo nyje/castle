@@ -1,11 +1,10 @@
 dofile(minetest.get_modpath("castle").."/pillars.lua")
 dofile(minetest.get_modpath("castle").."/arrowslit.lua")
 dofile(minetest.get_modpath("castle").."/tapestry.lua")
-dofile(minetest.get_modpath("castle").."/crossbow.lua")
-dofile(minetest.get_modpath("castle").."/arrow.lua")
 dofile(minetest.get_modpath("castle").."/jailbars.lua")
 dofile(minetest.get_modpath("castle").."/town_item.lua")
 dofile(minetest.get_modpath("castle").."/shields_decor.lua")
+dofile(minetest.get_modpath("castle").."/murder_hole.lua")
 
 minetest.register_node("castle:stonewall", {
 	description = "Castle Wall",
@@ -73,6 +72,7 @@ minetest.register_craft({
 minetest.register_node("castle:roofslate", {
 	drawtype = "raillike",
 	description = "Roof Slates",
+	inventory_image = "castle_slate.png",
 	paramtype = "light",
 	walkable = false,
 	tiles = {'castle_slate.png'},
@@ -87,6 +87,7 @@ minetest.register_node("castle:roofslate", {
 minetest.register_node("castle:hides", {
 	drawtype = "signlike",
 	description = "Hides",
+	inventory_image = "castle_hide.png",
 	paramtype = "light",
 	walkable = false,
 	tiles = {'castle_hide.png'},
