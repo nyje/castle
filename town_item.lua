@@ -431,3 +431,11 @@ minetest.register_abm({
 	        minetest.add_node({x=pos.x,y=pos.y-1,z=pos.z}, {name="castle:box_rope"})
 	end
 })
+
+minetest.register_craft({
+	output = "castle:ropebox",
+	recipe = {
+		{"default:wood"},
+		{"castle:ropes"},
+	}
+})
