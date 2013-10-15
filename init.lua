@@ -121,11 +121,53 @@ minetest.register_craft( {
          }
 } )
 
-minetest.register_craft({
-	type = "cooking",
-	output = "castle:roofslate",
-	recipe = "default:gravel",
-})
+local mod_building_blocks = minetest.get_modpath("building_blocks") 
+local mod_streets = minetest.get_modpath("streets") or minetest.get_modpath("asphalt")
+
+if mod_building_blocks then
+	minetest.register_craft( {
+         output = "castle:roofslate 4",
+         recipe = { 
+			{ "building_blocks:Tar" , "default:gravel" },
+			{ "default:gravel",       "building_blocks:Tar" }
+		}
+	})
+
+	minetest.register_craft( {
+         output = "castle:roofslate 4",
+         recipe = { 
+			{ "default:gravel",       "building_blocks:Tar" },
+			{ "building_blocks:Tar" , "default:gravel" }
+		}
+	})
+end
+
+if mod_streets then
+		minetest.register_craft( {
+         output = "castle:roofslate 4",
+         recipe = { 
+			{ "streets:asphalt" , "default:gravel" },
+			{ "default:gravel",   "streets:asphalt" }
+		}
+	})
+
+	minetest.register_craft( {
+         output = "castle:roofslate 4",
+         recipe = { 
+			{ "default:gravel",   "streets:asphalt" },
+			{ "streets:asphalt" , "default:gravel" }
+		}
+	})
+end
+
+if not (mod_building_blocks or mod_streets) then
+	minetest.register_craft({
+		type = "cooking",
+		output = "castle:roofslate",
+		recipe = "default:gravel",
+	})
+
+end
 
 stairs.register_stair_and_slab("stonewall", "castle:stonewall",
 		{cracky=3},
